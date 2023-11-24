@@ -13,8 +13,10 @@ export class HashComponent implements OnInit {
   firstName = 'archit';
   hash = '';
   pageTitle = 'Hash Generator';
-
-  constructor(private http: HttpClient)
+ private http:HttpClient
+  constructor( http: HttpClient){
+    this.http = http;
+  }
 
   ngOnInit() {
   }
@@ -24,7 +26,7 @@ export class HashComponent implements OnInit {
       if (this.firstName === '') {
         throw new Error('Please enter a name');
       }
-      this.http.get<HashResponse>(`http://localhost:5000/api/Hash/${this.firstname.toLowerCase()}`)
+      this.http.get<HashResponse>(`http://localhost:5000/api/Hash/${this.firstName.toLowerCase()}`)
         .subscribe(res => {
           if (res.hash === '') {
             throw new Error('Something went wrong');

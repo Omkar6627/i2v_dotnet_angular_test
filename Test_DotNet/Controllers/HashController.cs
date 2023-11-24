@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace Test_DotNet.Controllers
 {
@@ -24,7 +25,8 @@ namespace Test_DotNet.Controllers
                 // Return a HashResponse Object which contains the hashString (alphanumeric, without '-') converted from hashedBytes
                 var response = new HashResponse
                 {
-                    Hash = hashedBytes
+                    Hash = Convert.ToBase64String(hashedBytes)
+
                 };
                 return new JsonResult(response);
             }
