@@ -37,7 +37,9 @@ If you are unable to set up the angular application, you can use the tools like 
 4. Ex: If you enter `archit` in the input field, the hash value should be `92A1B1799146E7EBE480694175806E3A01755A84D9F316B807D7D9C6280FE6B8` for the name `John` as per the correct logic to be.
 5. The hash value for the name should be displayed below the button. Copy the hash value.
 
-### Paste the hash value Here in the readme file: NwKIOa6jtbJ/dfr9z9o5FZmNZTX1mKFkeLV/Q/AdXBY=
+### Paste the hash value Here in the readme file: 
+1. For Input "omkar":'37028839AEA3B5B27F75FAFDCFDA3915998D6535F598A16478B57F43F01D5C16'.
+2. For Input "John" :'96D9632F363564CC3032521409CF22A852F2032EEC099ED5967C0D000CEC607A'
 ___
 
 ## Troubleshooting
@@ -47,5 +49,4 @@ If you run into issues while setting up the solution, try the following:
 - Make sure you have the latest versions of .Net 5 SDK, Node.js, and npm installed, appropriate Angular version.
 - Check that the API is running and accessible at `http://localhost:5000/`
 - If you get a CORS error, make sure that the correct origins are allowed in the API
-![Output Image](image.png)
-![Output Image+](image-1.png)
+

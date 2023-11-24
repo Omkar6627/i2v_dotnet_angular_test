@@ -21,11 +21,12 @@ namespace Test_DotNet.Controllers
             using (var hash = SHA256.Create())
             {
                 byte[] hashedBytes = hash.ComputeHash(inputBytes);
-                
+               string hashString = BitConverter.ToString(hashedBytes).Replace("-", "");
+
                 // Return a HashResponse Object which contains the hashString (alphanumeric, without '-') converted from hashedBytes
                 var response = new HashResponse
                 {
-                    Hash = Convert.ToBase64String(hashedBytes)
+                    Hash =hashString
 
                 };
                 return new JsonResult(response);
